@@ -2,6 +2,11 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 52px;
 }
+/* git add .
+git commit -m "Initial commit"
+git branch -M main         # ব্রাঞ্চের নাম পরিবর্তন (ঐচ্ছিক)
+git push -u origin main */
+
 body{
     
     background: #111828;
@@ -90,7 +95,7 @@ section i{
 .sk{
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(30, 37, 37);
+    background-color: #111828;
     padding:20px;
     border-radius: 6px;
     flex: 25%;
@@ -98,9 +103,45 @@ section i{
  
 
 }
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 
+.left, 
+.right {
+  flex: 1;
+  min-width: 300px;
+}
+.bsc{
+  background-color: #111828 ;
+  border-radius: 5%;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  
+}
+.bsc p{
+text-align: justify;
+}
 
+.hsc{
+   background-color: #111828 ;
+  border-radius: 5%;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 
+.experience{
+   background-color: #111828 ;
+  border-radius: 5%;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 100px;
+}
 
 #contact a {
     color: rgb(255, 255, 255);
