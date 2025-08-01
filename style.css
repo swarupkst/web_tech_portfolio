@@ -42,6 +42,11 @@ header img{
   margin-right: 18%;
   justify-content: center;
 }
+    @media screen and (max-width: 800px) {
+    .navbar {
+        margin: 0;
+    }
+}
 
 .navbar a {
   float: left;
@@ -145,8 +150,21 @@ text-align: justify;
   padding: 10px;
   font-size: 18px;
   margin-bottom: 10px;
-  margin-top: 100px;
+  
 }
+#bytecapsule{
+  height: 60px;
+  width: 60px;
+  background-color: aliceblue;
+}
+
+#certification{
+  background-color: #192130;
+}
+#certification p{
+  
+}
+
 
 #contact a {
     color: rgb(255, 255, 255);
