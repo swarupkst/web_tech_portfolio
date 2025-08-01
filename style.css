@@ -30,6 +30,16 @@ header h1{
 header img{
     border-radius: 50%;
 }
+header p{
+  font-size: 30px;
+  text-decoration: none;
+  text-decoration: none;
+   margin-top: -10px;
+}
+header a{
+  text-decoration: none;
+  margin-right: 5px;
+}
 
 .navbar {
     display: flex;
@@ -161,9 +171,7 @@ text-align: justify;
 #certification{
   background-color: #192130;
 }
-#certification p{
-  
-}
+
 
 
 #contact a {
