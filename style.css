@@ -73,6 +73,38 @@ header a{
   background: #ddd;
   color: black;
 }
+/* Menu icon */
+.navbar .icon {
+  display: none;
+  cursor: pointer;
+  user-select: none;
+  align-items: center;
+  text-align: center;
+  size: 100px;
+}
+
+/* Hide the checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Mobile view */
+@media screen and (max-width: 700px) {
+  .navbar a { display: none; }
+  .navbar .icon { display: block; }
+
+  /* Show menu links when checkbox checked */
+  #menu-toggle:checked ~ a {
+    display: block;
+    width: 100%;
+    
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
 
 h2{
