@@ -67,14 +67,25 @@ function validateRealTime() {
 function validateSingleField(field) {
     const fieldName = field.name;
     const value = field.value.trim();
-   
+    let isValid = true;
+
     switch(fieldName) {
         case 'name':
             if (value === '') {
                 showError('errorName', 'Name is required');
+                isValid = false;
             } else if (value.length < 2) {
                 showError('errorName', 'Name must be at least 2 characters long');
-            } else {
+                isValid = false;
+
+                
+            } 
+            else if (!/^[a-zA-Z\s]+$/.test(value)) {
+                showError('errorName', 'Name can only contain letters');
+}
+
+            
+            else {
                 showError('errorName', '');
             }
             break;
@@ -82,8 +93,10 @@ function validateSingleField(field) {
         case 'email':
             if (value === '') {
                 showError('errorEmail', 'Email is required');
+                isValid = false;
             } else if (!isValidEmail(value)) {
                 showError('errorEmail', 'Please enter a valid email address');
+                isValid = false;
             } else {
                 showError('errorEmail', '');
             }
@@ -92,6 +105,7 @@ function validateSingleField(field) {
         case 'subject':
             if (value === '') {
                 showError('errorSubject', 'Subject is required');
+                isValid = false;
             } else {
                 showError('errorSubject', '');
             }
@@ -100,15 +114,21 @@ function validateSingleField(field) {
         case 'message':
             if (value === '') {
                 showError('errorMessage', 'Write your message');
+                isValid = false;
             } else {
                 showError('errorMessage', '');
             }
             break;
     }
+
+    return isValid;
 }
 
 function showError(id, message) {
-    document.getElementById(id).textContent = message;
+    const el = document.getElementById(id);
+    if (el) {
+        el.textContent = message;
+    }
 }
 
 function isValidEmail(email) {
@@ -116,3 +136,19 @@ function isValidEmail(email) {
 }
 
 validateRealTime();
+
+// ✅ Submit event (alert বাদ দিয়ে, error message দেখাবে)
+document.getElementById('form1').addEventListener('submit', function(e) {
+    let formIsValid = true;
+    const inputs = this.querySelectorAll('input, textarea');
+
+    inputs.forEach(input => {
+        if (!validateSingleField(input)) {
+            formIsValid = false;
+        }
+    });
+
+    if (!formIsValid) {
+        e.preventDefault(); // prevent form submission
+    }
+});

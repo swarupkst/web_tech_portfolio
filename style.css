@@ -47,9 +47,7 @@ header a{
   background-color: #192130;
   position: fixed;
   top: 0;
-  width: 63%;
-  margin-left: 18%;
-  margin-right: 16%;
+  width: 100%;
   justify-content: center;
 }
     
@@ -75,23 +73,30 @@ header a{
 }
 /* Menu icon */
 .navbar .icon {
-  display: none;
-  cursor: pointer;
-  user-select: none;
-  align-items: center;
-  text-align: center;
-  size: 100px;
-}
+      display: none; 
+      font-size: 22px;
+      color: white;
+      cursor: pointer;
+      margin-left: auto;
+    }
 
-/* Hide the checkbox */
+
+
 #menu-toggle {
   display: none;
 }
 
 /* Mobile view */
 @media screen and (max-width: 700px) {
-  .navbar a { display: none; }
-  .navbar .icon { display: block; }
+      .navbar a {
+        display: none;
+      }
+      .navbar .icon {
+        display: block;
+        padding-right: 20px;
+        
+      }
+   
 
   /* Show menu links when checkbox checked */
   #menu-toggle:checked ~ a {
