@@ -198,15 +198,123 @@ text-align: justify;
   margin-bottom: 10px;
   
 }
-#bytecapsule{
-  height: 60px;
-  width: 60px;
-  background-color: aliceblue;
+
+
+.bytecapsule {
+    background-color: #111828;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px; /* Fixed width for box */
+    align-items: center;
+    text-align: center;
+    
+    
+}
+   
+
+
+
+#project {
+  padding: 50px 20px;
+  background: #192130;
 }
 
-#certification{
-  background-color: #192130;
+#project h2 {
+ 
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #ffffff;
 }
+
+
+.allproject {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  
+}
+
+.myproject {
+  background: #111828;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+
+.myproject img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+
+.myproject h4 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+
+.myproject button,
+.myproject .button {
+  margin: 5px 5px;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 20px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.myproject button:hover,
+.myproject .button:hover {
+  background: #388E3C;
+}
+
+/* 🔹 Paragraph */
+.myproject p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-top: 15px;
+  color: #ffffff;
+  text-align: justify;
+}
+
+
+@media (max-width: 700px) {
+  #project h2 {
+    font-size: 25px;
+  }
+  .myproject h4 {
+    font-size: 19px;
+  }
+}
+
+#bornolota img{
+padding-top: 20px;
+}
+
+@media (max-width: 480px) {
+  #project {
+    padding: 30px 10px;
+  }
+  .myproject {
+    padding: 15px;
+  }
+  .myproject p {
+    font-size: 14px;
+  }
+}
+
+
 
 
 
