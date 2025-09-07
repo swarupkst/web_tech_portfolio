@@ -2,10 +2,6 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 52px;
 }
-/* git add .
-git commit -m "Initial commit"
-git branch -M main         # ব্রাঞ্চের নাম পরিবর্তন (ঐচ্ছিক)
-git push -u origin main */
 
 body{
     
@@ -50,9 +46,6 @@ header a{
   width: 100%;
   justify-content: center;
 }
-    
-
-
 
 .navbar a {
  
@@ -81,12 +74,11 @@ header a{
     }
 
 
-
 #menu-toggle {
   display: none;
 }
 
-/* Mobile view */
+
 @media screen and (max-width: 700px) {
       .navbar a {
         display: none;
@@ -98,7 +90,7 @@ header a{
       }
    
 
-  /* Show menu links when checkbox checked */
+
   #menu-toggle:checked ~ a {
     display: block;
     width: 100%;
@@ -204,7 +196,7 @@ text-align: justify;
     background-color: #111828;
     border-radius: 10px;
     padding: 10px;
-    width: 300px; /* Fixed width for box */
+    width: 300px; 
     align-items: center;
     text-align: center;
     
@@ -244,8 +236,6 @@ text-align: justify;
 }
 
 
-
-
 .myproject img {
   max-width: 100%;
   height: auto;
@@ -253,13 +243,11 @@ text-align: justify;
   border-radius: 10px;
 }
 
-
 .myproject h4 {
   font-size: 24px;
   margin-bottom: 15px;
   color: #ffffff;
 }
-
 
 .myproject button,
 .myproject .button {
@@ -288,7 +276,6 @@ text-align: justify;
   text-align: justify;
 }
 
-
 @media (max-width: 700px) {
   #project h2 {
     font-size: 25px;
@@ -313,10 +300,6 @@ padding-top: 20px;
     font-size: 14px;
   }
 }
-
-
-
-
 
 #contact a {
     color: rgb(255, 255, 255);
